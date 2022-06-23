@@ -1,0 +1,161 @@
+*{
+    margin :0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #2B2B2B;;
+    font-family: 'nunito';
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    background-image: url(./images/FoodAndDrinkDesign.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.container{
+    width: 90%;
+    height: auto;
+    max-width: 1200px;
+}
+#logo{
+    text-align: center;
+    font-size: 5rem;
+    color:#F66B34 ;
+    margin-bottom: 25px;
+}
+form{
+    width: 90%;
+    max-width: 450px;
+    margin: 25px auto;
+}
+form input{
+    padding: 12px;
+    
+}
+#search{
+    background-color: #FFE8D6;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 70%;
+}
+#submit{
+    background-color: #E6B31E;
+    border: none;
+    border-radius: 0 5px 5px 0 ;
+    width: 20%;
+}
+.content{
+   background-color:#E6B31E ;
+   padding: 30px;
+   border: none;
+   border-radius: 25px;
+   border: 3px solid #F66B34 ;
+}
+.recipeTitle{
+   font-size: 3rem;
+   text-align: center; 
+   padding: 10px;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+h1{
+    padding: 10px;
+    text-align: center;
+    
+}
+.fin{
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+p{
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #2B2B2B;
+
+}
+/* Responsiveness */
+@media only screen and (max-width: 765px){
+    #logo{
+      font-size: 3.5rem;
+    
+    }
+    .recipeTitle{
+        padding: 5px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .fin{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 550px){
+#logo{
+    font-size: 2.8rem;
+}
+body{
+    padding: 50px 0;
+}
+.fin{
+    font-size: 1.2rem;
+    padding: 5px 0;
+}
+}
+
+@media only screen and (max-width: 530px){
+    #logo{
+        width: 100%;
+    }
+    .recipeTitle{
+        font-size: 1.5rem;
+    }
+    body{
+        padding: 30px 0;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    #logo{
+        font-size: 2rem;
+    }
+    form input{
+        padding: 7px;
+    }
+    .recipeTitle{
+        font-size: 1rem;
+    }
+    .content{
+        padding: 15px;
+    }
+    h1{
+        font-size: 12px;
+    }
+    body{
+        padding: 20px 0;
+    }
+    .fin{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 0.7rem;
+    }
+
+}
