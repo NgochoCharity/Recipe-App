@@ -24,6 +24,9 @@ const myURL = 'https://recipe-by-api-ninjas.p.rapidapi.com/v1/recipe?query='
 	const inputImage = document.querySelector('#inputImage')
 	const toBeRemoved = document.querySelector('#toBeRemoved')
 	const src = toBeRemoved.getAttribute('src')
+	const commentform = document.querySelector('#comment-form')
+	const comments = document.querySelector('#comments')
+	let myInput = document.querySelector('#comment-input')
 	var uploadedImage = ""
 
 
@@ -31,14 +34,13 @@ const myURL = 'https://recipe-by-api-ninjas.p.rapidapi.com/v1/recipe?query='
 
 //Recipe search function
 
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', (e) => {
 e.preventDefault()
-searchItem = event.target.querySelector('#search').value;
+searchItem = e.target.querySelector('#search').value;
 searchRecipe()
 displayRecipe()
 
 })
-
 
 function searchRecipe(){
 	fetch(myURL+searchItem, options)
@@ -57,7 +59,6 @@ function searchRecipe(){
 	})
 	.catch(err => console.error(err))	
 }
-
 
 function selectItems (title, ingredients, instructions, servings){
 	this.title = title;
@@ -88,4 +89,16 @@ function dislikebutton(){
 	let newdislike = dislikes ++
 	ADD.innerText = newdislike
 
+}
+
+//Comment section
+commentform.addEventListener('submit',(e) => {
+	e.preventDefault()
+	addComment()
+})
+function addComment(){
+	let li= document.createElement('li');
+    li.textContent = `${myInput.value}`
+    comments.appendChild(li)
+	console.log(li)
 }
