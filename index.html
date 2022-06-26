@@ -29,29 +29,47 @@
             <h1 class="recipeTitle">Recipe</h1>
 
             <div id="image-holder">
-                <img src="./assets/images/FoodAndDrinkDesignColour.svg">
+                 <img id="toBeRemoved" src="./assets/images/FoodAndDrinkDesignColour.svg">
             </div>
 
-            <div id="ingredients">
-                <h1>Ingredients </h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam fugit distinctio placeat quasi, nobis obcaecati quibusdam deserunt nemo consectetur at nesciunt, veritatis, expedita possimus explicabo quaerat quisquam perspiciatis illo tenetur.</p>
+            <div >
+                 <h1>Ingredients </h1>
+                 <p id="ingredients" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam fugit distinctio placeat quasi, nobis obcaecati quibusdam deserunt nemo consectetur at nesciunt, veritatis, expedita possimus explicabo quaerat quisquam perspiciatis illo tenetur.</p>
             </div>
 
             <p class="fin">&#x1F345 &#x1F33D &#129388</p>
 
-            <div id="instructions">
-                <h1>Instuctions <br> &#x1F4DC</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere suscipit mollitia sapiente laboriosam quaerat unde assumenda quos nostrum dolore nesciunt eos pariatur eveniet quam illo autem, praesentium magni ipsam ipsa!</p>
+            <div >
+                 <h1>Instructions <br> &#x1F4DC</h1>
+                 <p id="instructions">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere suscipit mollitia sapiente laboriosam quaerat unde assumenda quos nostrum dolore nesciunt eos pariatur eveniet quam illo autem, praesentium magni ipsam ipsa!</p>
             </div>
 
-            <div id="servings">
-                <h1>Sernings:</h1>
+            <div>
+                 <h1  id="servings">Servings:</h1>
             </div>
+            <div class="buttons">
+                 <li id="like"><i class='bx bxs-like'></i><span id="add">0</span></li>
+                 <li id="dislike"><i class='bx bxs-dislike' ></i><span id="ADD">0</span></li>
+            </div>
+            <!-- <input type="file" id="inputImage" accept="image/png, image/jpg, image/jpeg"> -->
+
+            <h2>Comments</h2>
+
+            <h5>Leave a comment</h5>
+
+            <form id="comment-form" action="">
+            <input type='text' name="comment" id="comment-input" placeholder="Type here..." >
+             </br>
+             <input type="submit" id="submitbutton" value= "Submit" />
+            </form>
+            <ul id='list' id='comments'></ul>
+           
+  </div>
         </div>
     </section>
 
-    <script src="./assets/js/index.js"></script>
-    <script src="./assets/js/environment.js"></script>
+    <script type="module"src="./assets/index.js"></script>
+    <script  type="module" src="./assets/environment.js"></script>
 
 </body>
 </html>
