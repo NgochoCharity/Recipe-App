@@ -31,11 +31,29 @@ const myURL = 'https://recipe-by-api-ninjas.p.rapidapi.com/v1/recipe?query='
 
 //Recipe search function
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', (event) => {
 e.preventDefault()
-searchItem = e.target.querySelector('#search').value;
+searchItem = event.target.querySelector('#search').value;
 searchRecipe()
 displayRecipe()
 
 })
 
+
+function searchRecipe(){
+	fetch(myURL+searchItem, options)
+	.then(response => response.json())
+	.then(data => {
+		data.forEach(
+			function(recipe){
+				console.log(recipe)
+				let recipeDetails = new selectItems(recipe.title, recipe.ingredients, recipe.instructions, recipe.servings)
+				recipeTitle.innerText = recipe.title
+				ingredients.innerText = recipe.ingredients
+				instructions.innerText = recipe.instructions
+				servings.innerText = `Servings:${recipe.servings}`
+			}
+		)
+	})
+	.catch(err => console.error(err))	
+}
