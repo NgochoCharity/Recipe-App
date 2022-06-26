@@ -77,3 +77,15 @@ function selectItems (title, ingredients, instructions, servings){
 		add.innerText = newlike
 
 	}
+
+//dislike button
+
+dislike.addEventListener('click', () =>{
+	dislikebutton(dislikes)
+})
+let dislikes = 0;
+function dislikebutton(){
+	let newdislike = dislikes ++
+	ADD.innerText = newdislike
+
+}
