@@ -65,3 +65,15 @@ function selectItems (title, ingredients, instructions, servings){
 	this.instructions = instructions;
 	this.servings = servings;
 }
+
+	// like button
+
+	like.addEventListener('click', () =>{
+		likebutton(likes)
+	})
+	let likes = 0;
+	function likebutton(){
+		let newlike = likes ++
+		add.innerText = newlike
+
+	}
