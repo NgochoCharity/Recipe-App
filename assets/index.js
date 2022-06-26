@@ -57,3 +57,11 @@ function searchRecipe(){
 	})
 	.catch(err => console.error(err))	
 }
+
+
+function selectItems (title, ingredients, instructions, servings){
+	this.title = title;
+	this.ingredients = ingredients;
+	this.instructions = instructions;
+	this.servings = servings;
+}
