@@ -10,6 +10,8 @@ body{
     width: 100%;
     display: flex;
     align-items: center;
+    /* height: 100%; */
+    opacity: 0.9; 
     justify-content: center;
     padding: 80px 0;
     background-image: url(./images/FoodAndDrinkDesign.svg);
@@ -87,6 +89,46 @@ p{
     color: #2B2B2B;
 
 }
+.buttons{
+    list-style: none;
+    color: #2B2B2B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    font-size: 3rem;
+    padding: 10px;
+}
+li span{
+    font-size: 1.5rem;
+}
+#comment-form{
+    width: 100%;
+    max-width: 600px;
+    margin: 10px 0 10px 0;
+    padding: 0;
+    display: flex;
+
+}
+
+#comment-input{
+    padding: 15px;
+    background-color: #FFE8D6;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    
+}
+
+#submitbutton{
+    background-color: #2B2B2B;
+    color: #F66B34;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 0 8px 8px 0;
+}
+h2{
+    padding: 10px 0;
+}
 /* Responsiveness */
 @media only screen and (max-width: 765px){
     #logo{
@@ -117,6 +159,10 @@ body{
 .fin{
     font-size: 1.2rem;
     padding: 5px 0;
+}
+.buttons{
+    font-size: 2rem;
+    gap: 30px;
 }
 }
 
@@ -156,6 +202,9 @@ body{
     }
     p{
         font-size: 0.7rem;
+    }
+    li span{
+        font-size: 1rem;
     }
 
 }
