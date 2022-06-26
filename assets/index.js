@@ -12,6 +12,7 @@ const myURL = 'https://recipe-by-api-ninjas.p.rapidapi.com/v1/recipe?query='
 
 	const form = document.querySelector('#search-recipe')
 	const submit = document.querySelector('#submit')
+	const contain = document.getElementsByClassName('contain')
 	const recipeTitle = document.querySelector('.recipeTitle')
 	const image = document.querySelector('#image-holder')
 	const ingredients = document.querySelector('#ingredients')
@@ -40,6 +41,7 @@ searchItem = e.target.querySelector('#search').value;
 searchRecipe()
 displayRecipe()
 
+
 })
 
 function searchRecipe(){
@@ -54,8 +56,10 @@ function searchRecipe(){
 				ingredients.innerText = recipe.ingredients
 				instructions.innerText = recipe.instructions
 				servings.innerText = `Servings:${recipe.servings}`
+				generateHTML(data)
 			}
 		)
+		
 	})
 	.catch(err => console.error(err))	
 }
@@ -66,6 +70,7 @@ function selectItems (title, ingredients, instructions, servings){
 	this.instructions = instructions;
 	this.servings = servings;
 }
+
 
 	// like button
 
@@ -91,6 +96,19 @@ function dislikebutton(){
 
 }
 
+//upload image 
+
+inputImage.addEventListener('change', function(){
+	const reader = new FileReader();
+		reader.addEventListener('load', () => {
+			uploadedImage = reader.result;
+	       image.style.backgroundImage = `(url${uploadedImage})`
+			
+		})
+		reader.readAsDataURL(this.files[0])
+	
+})
+	
 //Comment section
 commentform.addEventListener('submit',(e) => {
 	e.preventDefault()
